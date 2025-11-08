@@ -107,7 +107,6 @@ export const handleWebhook = async (req: Request, res: Response) => {
                 console.log(`Subscription ID: ${session.subscription}`);
                 console.log(`Payment Status: ${session.payment_status}`);
                 console.log(`Session ID: ${session.id}`);
-                console.log('\nPROVISIONING ACCOUNT...');
                 console.log(`User ${session.customer_email} has paid for the ${session.metadata?.planName || session.metadata?.planId} Plan. Provisioning account.`);
                 console.log('='.repeat(80) + '\n');
 
