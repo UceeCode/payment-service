@@ -1,4 +1,4 @@
-# FlowCraft Payment Service 
+# FlowCraft Payment Service
 
 A robust **Express.js + TypeScript** payment service integrated with **Stripe** for subscription management. Built for business automation workflows with Docker support.
 
