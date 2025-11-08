@@ -30,17 +30,15 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('combined'));
 }
 
-// IMPORTANT: Webhook route with raw body MUST come BEFORE express.json()
+
 app.use(
     '/api/stripe-webhook',
     express.raw({ type: 'application/json' }),
     (req: Request, res: Response) => {
-        // Import and call webhook handler directly
         require('./controllers/payment.controller').handleWebhook(req, res);
     }
 );
 
-// NOW apply JSON parser for all other routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -59,7 +57,6 @@ app.get('/', (_req: Request, res: Response) => {
     });
 });
 
-// Apply other routes
 app.use('/api', paymentRoutes);
 
 app.use((_req: Request, res: Response) => {
