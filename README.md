@@ -60,6 +60,6 @@ docker-compose up --build
 
 ## SUBMISSON VIDE0 LINKS
 
-### Link 1
+### Link 1 (Product set-up in stripe): https://www.loom.com/share/1a71939ca28747b3b7c9c7f66ba8b60e
 
-### Link 2
+### Link 2 (Technical Demo): https://www.loom.com/share/d6dc6ae950db4b94a4d29b9a79c22353
